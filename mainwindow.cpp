@@ -467,7 +467,7 @@ void MainWindow::on_bootloaderUnlocked_stateChanged()
 
 void MainWindow::on_info_clicked()
 {
-    QMessageBox::information(this, "AndRoot V3.0", "Info\nInfo\nInfo");
+    QMessageBox::information(this, "AndRoot V3.0", "Work in progress\n\nhttps://github.com/Stemp123/AndRoot-Root-Helper");
 }
 
 
