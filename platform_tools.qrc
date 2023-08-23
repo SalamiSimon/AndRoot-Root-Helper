@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file>platform-tools/adb.exe</file>
+        <file>platform-tools/cmd.exe</file>
+        <!-- Add more individual files within the platform-tools/ directory as needed -->
+    </qresource>
+</RCC>
