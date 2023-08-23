@@ -24,9 +24,6 @@ QT += concurrent
 FORMS += \
     mainwindow.ui
 
-# Set the build directory
-DESTDIR = C:\Users\Simon\Documents\QT_projects\AndRootRelease\
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
