@@ -375,7 +375,7 @@ void MainWindow::on_extractPayload_clicked()
     }
     if (ui->binBtn->isChecked()){
         QString filePath = ui->filePath->text();
-        QString executablePath = "C:/Users/Simon/OneDrive - EBUR/OOP/AndRootV2/payload-dumper-go.exe";
+        QString executablePath = "payload_dumper/payload-dumper-go.exe";
         QProcess process;
         process.start(executablePath, QStringList() << filePath);
         process.waitForFinished();  // Wait for the process to finish
