@@ -26,9 +26,6 @@ int main(int argc, char *argv[])
 
     MainWindow w;
 
-    //Window customization
-    //w.setWindowFlags(w.windowFlags() | Qt::FramelessWindowHint);
-    //w.setAttribute(Qt::WA_TranslucentBackground);
     w.setFixedSize(w.size());
 
     w.show();

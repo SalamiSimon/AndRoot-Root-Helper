@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "androot.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,25 +21,17 @@ private slots:
 
     void on_bootFastboot_clicked();
 
-    void on_pushButton_clicked();
-
     void on_exitBootloader_clicked();
 
     void on_detectFastboot_clicked();
 
-    void on_zipBin_clicked();
-
     void on_binBtn_clicked();
-
-    void on_filePathBtn_triggered(QAction *arg1);
 
     void on_zipBtn_clicked();
 
     void on_filePathBtn_clicked();
 
     void on_extractPayload_clicked();
-
-    void on_extractProgressBass_valueChanged(int value);
 
     void onExtractionCompleted();
 
@@ -50,26 +41,13 @@ private slots:
 
     void on_imgBtn_clicked();
 
-    void on_exitApp_clicked();
-
-    void on_minimizeApp_clicked();
-
     void extractFileFromZip(const QString& zipFilePath, const QString& filePathInZip, const QString& outputPath);
 
-    void on_USBDebugging_stateChanged(int arg1);
+    void on_USBDebugging_stateChanged();
 
-    void on_backedUp_stateChanged(int arg1);
+    void on_backedUp_stateChanged();
 
-    void on_bootloaderUnlocked_stateChanged(int arg1);
-
-    void on_dragButton_pressed();
-
-    void mouseMoveEvent(QMouseEvent *event);
-
-    void mousePressEvent(QMouseEvent *event);
-
-    void mouseReleaseEvent(QMouseEvent *event);
-
+    void on_bootloaderUnlocked_stateChanged();
 
     void on_info_clicked();
 

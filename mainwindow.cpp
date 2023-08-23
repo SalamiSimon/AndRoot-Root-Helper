@@ -18,8 +18,6 @@
 #include <QMessageBox>
 #include <QMouseEvent>
 
-#include "androot.h"
-
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -109,7 +107,7 @@ void MainWindow::on_detectADBDevice_clicked()
 
     if(deviceID != "\r\n")
     {
-        ui->deviceStatus->setText("Device Connected! Device ID: " + deviceID);
+        ui->deviceStatus->setText("Device Connected!");
         ui->deviceStatus->setStyleSheet("color: green;");
         ui->deviceIDLabel->setStyleSheet("color: green;");
         ui->deviceIDLabel->setText("Device ID: " + deviceID);
@@ -161,10 +159,6 @@ void MainWindow::on_bootFastboot_clicked()
     }
 }
 
-
-void MainWindow::on_pushButton_clicked() {}
-
-
 void MainWindow::on_exitBootloader_clicked()
 {
     QProcess process;
@@ -175,7 +169,6 @@ void MainWindow::on_exitBootloader_clicked()
     if (process.waitForStarted()) {
         // Wait for the process to finish or timeout after 10 seconds
         if (process.waitForFinished(2000)) {
-            QString output = process.readAllStandardOutput();  // Read the command output
             ui->bootState->setText("Boot State: Normal Boot");
             inFastboot = false;
         } else {
@@ -227,20 +220,12 @@ void MainWindow::on_detectFastboot_clicked()
     }
 }
 
-
-void MainWindow::on_zipBin_clicked() {}
-
-
 void MainWindow::on_binBtn_clicked()
 {
     ui->filePathBtn->setEnabled(true);
     ui->extractPayload->setText("Extract boot image");
     ui->extractPayload->setEnabled(true);
 }
-
-
-void MainWindow::on_filePathBtn_triggered(QAction *arg1) {}
-
 
 void MainWindow::on_zipBtn_clicked()
 {
@@ -421,7 +406,6 @@ void MainWindow::on_extractPayload_clicked()
         process.setWorkingDirectory("platform-tools");
         process.start("cmd.exe", QStringList() << "/c" << "fastboot boot " << imgPath);
         process.waitForFinished();
-        QString boot = process.readAllStandardOutput();
 
         disableAllBtn(false);
         QMessageBox::information(this, "Success!", "If you enter a bootloop just hold power+volume(up/down) until the phone restarts. If it boots successfully and you want to make the root permanent:\n\nMagisk->Install->Direct Install(Recommended)->Reboot");
@@ -436,8 +420,6 @@ void MainWindow::onExtractionCompleted()
     loadingTimer->deleteLater(); // Delete the loadingTimer
     ui->filePath->setText("");
 }
-
-void MainWindow::on_extractProgressBass_valueChanged(int value) {}
 
 void MainWindow::on_openImagePath_clicked()
 {
@@ -457,20 +439,7 @@ void MainWindow::on_imgBtn_clicked()
         ui->extractPayload->setEnabled(true);
 }
 
-
-void MainWindow::on_exitApp_clicked()
-{
-    QApplication::quit();
-}
-
-
-void MainWindow::on_minimizeApp_clicked()
-{
-    showMinimized();
-}
-
-
-void MainWindow::on_USBDebugging_stateChanged(int arg1)
+void MainWindow::on_USBDebugging_stateChanged()
 {
     if(ui->USBDebugging->isChecked() && ui->backedUp->isChecked() && ui->bootloaderUnlocked->isChecked())
         disableAllBtn(false);
@@ -479,7 +448,7 @@ void MainWindow::on_USBDebugging_stateChanged(int arg1)
 }
 
 
-void MainWindow::on_backedUp_stateChanged(int arg1)
+void MainWindow::on_backedUp_stateChanged()
 {
     if(ui->USBDebugging->isChecked() && ui->backedUp->isChecked() && ui->bootloaderUnlocked->isChecked())
         disableAllBtn(false);
@@ -488,30 +457,17 @@ void MainWindow::on_backedUp_stateChanged(int arg1)
 }
 
 
-void MainWindow::on_bootloaderUnlocked_stateChanged(int arg1)
+void MainWindow::on_bootloaderUnlocked_stateChanged()
 {
     if(ui->USBDebugging->isChecked() && ui->backedUp->isChecked() && ui->bootloaderUnlocked->isChecked())
         disableAllBtn(false);
     else
         disableAllBtn(true);
 }
-
-
-void MainWindow::on_dragButton_pressed()
-{
-    if (windowState() != Qt::WindowMaximized) {
-        // Get the current position of the cursor relative to the window
-        const QPoint relativePos = mapFromGlobal(QCursor::pos());
-
-        // Store the initial position of the cursor when the button is pressed
-        dragStartPosition = relativePos;
-    }
-}
-
 
 void MainWindow::on_info_clicked()
 {
-    QMessageBox::information(this, "AndRoot V1.5", "Infor\nInfo\n\Info");
+    QMessageBox::information(this, "AndRoot V3.0", "Info\nInfo\nInfo");
 }
 
 
