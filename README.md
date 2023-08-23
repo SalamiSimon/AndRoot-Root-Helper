@@ -6,7 +6,7 @@ Automated ADB command to help root your phone
 
 ## Introduction
 
-AndRoot-Root-Helper is a command-line tool designed to simplify the process of rooting your Android device using ADB (Android Debug Bridge) commands. While it may not be a professionally developed application and is still a work in progress, it aims to provide a convenient way for users to execute the necessary ADB commands to unlock the bootloader, manipulate image files, and flash/boot patched files on their Android devices.
+AndRoot-Root-Helper is a GUI tool designed to simplify the process of rooting your Android device using ADB (Android Debug Bridge) commands. While it may not be a professionally developed application and is still a work in progress, it aims to provide a convenient way for users to execute the necessary ADB commands to unlock the bootloader, manipulate image files, and flash/boot patched files on their Android devices.
 
 ---
 
@@ -26,7 +26,7 @@ Before using AndRoot-Root-Helper, ensure that you have met the following prerequ
 
 ## Usage
 
-AndRoot-Root-Helper provides a set of commands to perform various tasks related to rooting your device. Here are some of the common commands:
+AndRoot-Root-Helper provides a user-friendly UI that perform various tasks related to rooting your device. Here are some of the common commands:
 
 - `adb-bootloader`: Reboots your device into bootloader/fastboot mode.
 - `adb-pull <source> <destination>`: Pulls a file or directory from your device to your computer.
@@ -43,10 +43,10 @@ Please note that the functionality of AndRoot-Root-Helper is a work in progress,
 To use AndRoot-Root-Helper, you can simply clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/AndRoot-Root-Helper.git
+git clone https://github.com/Stemp123/AndRoot-Root-Helper.git
 ```
 
-Ensure that you have ADB and Fastboot set up on your computer, as this tool relies on these utilities.
+ADB and fastboot files are included in the realese.
 
 ---
 
@@ -59,12 +59,6 @@ This project is open to contributions. If you'd like to contribute to the develo
 ## Disclaimer
 
 Use AndRoot-Root-Helper at your own risk. Unlocking the bootloader and making modifications to your Android device can lead to data loss and may void warranties. The developers and maintainers of AndRoot-Root-Helper are not responsible for any damage or issues that may arise from using this tool. Always proceed with caution and ensure you have backups before making any changes to your device.
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 
