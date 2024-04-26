@@ -64,9 +64,7 @@ Use AndRoot-Root-Helper at your own risk. Unlocking the bootloader and making mo
 
 ## Contact
 
-If you have any questions, issues, or suggestions regarding AndRoot-Root-Helper, feel free to reach out to us via [email](mailto:your-email@example.com) or by creating an issue in the [GitHub repository](https://github.com/your-username/AndRoot-Root-Helper/issues).
-
-Thank you for using AndRoot-Root-Helper!
+If you have any questions, issues, or suggestions regarding AndRoot-Root-Helper, feel free to reach out to us by creating an issue in the [GitHub repository](https://github.com/SalamiSimon/AndRoot-Root-Helper/issues).
 
 ---
 *Please note that this project is a work in progress, and its functionality may be limited or unstable. Use with caution and at your own discretion.*
